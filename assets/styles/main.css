@@ -12,3 +12,143 @@
 html{
     font-family: 'Inter', sans-serif;    
 }
+
+/*################*/
+/*!Clases genéricas*/
+/*################*/
+
+.btn{
+    border: 2px transparent;
+    background-color: white;
+    padding: 0.8em 1.4em;
+    border-radius: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    display: inline-block; 
+
+    /* transition: all 0.3s ease; */
+}
+
+/*#######*/
+/*TODO NAVBAR*/
+
+/*#######*/
+/*TODO footer*/
+
+/*##############################*/
+/*!Modificadores clases genéricas*/
+/*##############################*/
+.btn--black{ /*Modificación de la clase genérica btn*/
+    background-color: var(--main_dark);
+    color: white;
+}
+
+/*#####################################*/
+/*START index.html*/
+/*#####################################*/
+
+/*##############################*/
+/*!SECCIÓN HERO CONTAINER (INDEX)*/
+
+/*ESTILOS DEL CONTENEDOR HERO*/
+.hero {
+    height: calc(100vh - 0px); /*Se le debe restar el alto de la barra de navegación (Por ahora se resta cero)*/
+
+    background: url('../img/bg_desktop.jpg'); /*Inicialmente el fondo el el de desktop, con un media query se adapta a móbiles*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /*Centrar el contenido verticalmente*/
+    display: flex;
+    align-items: center;
+
+    padding-left: 1.2vw;
+}
+
+.hero__content {
+    width: 50%; /*El texto siempre ocupará el 50% del hero*/
+    display: flex;
+    flex-direction: column;
+
+    align-items: center; /*Centrado del logo y del botón*/
+    text-align: center; /*Centrado del párrafo*/
+
+    font-size: 2vw; /*El tamaño de la fuente del contenedor depende del ancho del dispositivo*/
+}
+
+.hero__logo {
+    width: 80%;
+}
+
+.hero__text {
+    font-size: 1em; /*El tamaño de fuente es relativa a su contenedor*/
+    font-weight: 300;
+}
+
+.btn--hero {
+    font-size: 0.6em; /*El tamaño de fuente es relativa a su contenedor*/
+}
+
+/*#####################################*/
+/*TODO sección de las categorías*/
+
+
+/*#####################################*/
+/*END index.html*/
+/*#####################################*/
+
+/*#####################################*/
+/*START categoryX.html*/
+/*#####################################*/
+
+
+/*#####################################*/
+/*TODO sección de los proveedores*/
+
+/*#####################################*/
+/*TODO sección de los productos de la categoría*/
+
+
+
+/*#####################################*/
+/*END categoryX.html*/
+/*#####################################*/
+
+/*###############*/
+/*!MEDIA QUERIES*/
+/*###############*/
+
+@media (max-width: 768px) {
+    /*Para pantallas pequeñas*/
+
+    .hero {
+        background: url('../img/bg_mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        display: block; /*Se quita el flex*/
+
+        padding-top: 4vh;
+    }
+
+    .hero__content {
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .hero__logo {
+        width: 100%;
+    }
+
+    .hero__text {
+        font-size: 6vw;
+    }
+
+    .btn--hero {
+        font-size: 4vw;
+        width: max-content;
+    }
+}
