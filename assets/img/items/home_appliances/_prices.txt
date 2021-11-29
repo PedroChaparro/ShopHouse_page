@@ -1,0 +1,6 @@
+washer: 950usd (20% off)
+freezer: 504usd (16% off)
+microwave: 79usd (30% off)
+cooler: 164usd (18% off)
+blender: 30usd
+hand mixer: 44.99usd
