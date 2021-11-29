@@ -1,0 +1,14 @@
+:root{
+    --main_red: #ff2a2b;
+    --main_yellow: #feb93b;
+    --verysoft_yellow: #fef5f5;
+    --main_dark: #2e2e2e;
+
+    --fz_sm: 14px;
+    --fz_md: 16px;
+    --fz_lg: 18px;
+}
+
+html{
+    font-family: 'Inter', sans-serif;    
+}
