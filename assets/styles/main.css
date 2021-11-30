@@ -112,7 +112,7 @@ nav .wrap-menu {
 }
 
 /*#######*/
-/*TODO footer*/
+/*! footer*/
 footer {
     background: var(--main_dark);
     font-size: var(--fz_lg);
@@ -252,7 +252,7 @@ footer {
 /*#####################################*/
 
 /*#####################################*/
-/*TODO sección de los proveedores*/
+/*! sección de los proveedores*/
 .providers__container {
     display: flex;
     flex-wrap: wrap;
@@ -277,7 +277,7 @@ footer {
 }
 
 /*#####################################*/
-/*TODO sección de los productos de la categoría*/
+/*! sección de los productos de la categoría*/
 /*Contenedor de las cards*/
 .products__container{
 
@@ -348,6 +348,13 @@ footer {
 
 .product-card__body{
     padding: 16px;
+}
+
+.product-card__name{
+    font-size: var(--fz_lg);
+    text-transform:initial; 
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .product-card__price{
