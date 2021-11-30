@@ -16,3 +16,6 @@ navToggle.addEventListener("click", () =>{
     }
 });
 
+//Elementos a los que se le va a aplicar el ScrollReveal
+ScrollReveal().reveal('.footer'); 
+

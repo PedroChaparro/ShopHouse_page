@@ -1,4 +1,4 @@
-:root{
+:root {
     --main_red: #ff2a2b;
     --main_yellow: #feb93b;
     --verysoft_yellow: #fef5f5;
@@ -7,17 +7,25 @@
     --fz_sm: 14px;
     --fz_md: 16px;
     --fz_lg: 18px;
+    --fz_xxlg: 24px;
 }
 
-html{
-    font-family: 'Inter', sans-serif;    
+html {
+    font-family: 'Inter', sans-serif;
 }
 
 /*################*/
 /*!Clases genéricas*/
 /*################*/
 
-.btn{
+.container {
+    width: 80%;
+    max-width: 1200px;
+
+    margin: 0px auto;
+}
+
+.btn {
     border: 2px transparent;
     background-color: white;
     padding: 0.8em 1.4em;
@@ -25,7 +33,7 @@ html{
     text-transform: uppercase;
     cursor: pointer;
 
-    display: inline-block; 
+    display: inline-block;
 
     transition: all 0.3s ease;
 }
@@ -80,11 +88,74 @@ nav .wrap-menu{
 
 /*#######*/
 /*TODO footer*/
+footer {
+    background: var(--main_dark);
+    font-size: var(--fz_lg);
+
+    padding: 36px 0;
+}
+
+.footer-subtitle {
+    color: white;
+}
+
+.footer__container {
+    /*Contenedor de todo lo que está tendro del footer*/
+    display: flex;
+    flex-direction: column; /*El disclaimer se pone debajo del contenedor de la información y las redes sociales*/
+
+    gap: 16px;
+}
+
+.footer__info-social {
+    /*Contenedor de la información de la empresa y las redes sociales*/
+    display: flex;
+    justify-content: space-around; /*Se ponen uno al lado del otro*/
+
+    align-items: center;
+}
+
+.footer__info {
+    /*El contenedor toma el mínimo tamaño posible (Para que el logo no se agrande demasiado)*/
+    width: min-content;
+    text-align: center;
+}
+
+.footer__logo { /*El logo ocupa el 100% del su contenedor*/
+    width: 100%;
+}
+
+.footer__list { /*Estilos aplicables a ambas listas*/
+    color: white;
+    list-style: none;
+    padding: 0px;
+}
+
+.social__list { /*Estilos independientes para las redes sociales*/
+    display: flex;
+    gap: 16px;
+    justify-content: space-evenly;
+}
+
+.social__item i { /*Tamaño de los iconos*/
+    color: white;
+    font-size: var(--fz_xxlg);
+}
+
+.footer__disclaimer {
+    text-align: center;
+    margin: 0px auto;
+    color: white;
+
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
 /*##############################*/
 /*!Modificadores clases genéricas*/
 /*##############################*/
-.btn--black{ /*Modificación de la clase genérica btn*/
+.btn--black {
+    /*Modificación de la clase genérica btn*/
     background-color: var(--main_dark);
     color: white;
 }
@@ -139,7 +210,6 @@ nav .wrap-menu{
 /*#####################################*/
 /*TODO sección de las categorías*/
 
-
 /*#####################################*/
 /*END index.html*/
 /*#####################################*/
@@ -148,14 +218,11 @@ nav .wrap-menu{
 /*START categoryX.html*/
 /*#####################################*/
 
-
 /*#####################################*/
 /*TODO sección de los proveedores*/
 
 /*#####################################*/
 /*TODO sección de los productos de la categoría*/
-
-
 
 /*#####################################*/
 /*END categoryX.html*/
@@ -167,7 +234,8 @@ nav .wrap-menu{
 
 @media (max-width: 768px) {
     /*Para pantallas pequeñas*/
-    /* Hero */
+
+    /*!Hero section*/
     .hero {
         background: url('../img/bg_mobile.jpg');
         background-repeat: no-repeat;
@@ -243,5 +311,15 @@ nav .wrap-menu{
 
     .body__fixed{
         position: fixed;
+
+    /*! footer */
+    footer {
+        font-size: var(--fz_sm);
     }
+
+    .footer__info-social {
+        flex-direction: column;
+        align-items: center;
+    }
+      
 }
