@@ -1,0 +1,533 @@
+:root {
+    --main_red: #ff2a2b;
+    --main_yellow: #feb93b;
+    --verysoft_yellow: #fef5f5;
+    --main_dark: #2e2e2e;
+
+    --fz_sm: 14px;
+    --fz_md: 16px;
+    --fz_lg: 18px;
+    --fz_xxlg: 24px;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+/*################*/
+/*!Clases genéricas*/
+/*################*/
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+
+    margin: 0px auto;
+}
+
+.btn {
+    border: 1px transparent;
+    background-color: white;
+    padding: 0.8em 1.4em;
+    border-radius: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    display: inline-block;
+
+    transition: all 0.3s ease;
+}
+
+.btn--primary:hover {
+    background: var(--main_yellow);
+    color: white;
+}
+
+.btn--secondary{
+    border: 1px solid var(--main_red);
+    background: var(--main_red);
+    color: white;
+}
+
+.btn--secondary--transparent{
+    background: transparent;
+    border: 1px solid var(--main_red);
+    color: var(--main_red);
+}
+
+.subtitle {
+    font-size: var(--fz_lg);
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px var(--main_dark);
+}
+
+.page-section {
+    /*Las secciones de la página tienen un márgen superior e inferior*/
+    margin: 24px 0;
+}
+
+/*! NAVBAR*/
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: none;
+}
+
+.nav__navigation {
+    display: flex;
+    gap: 2px;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    padding: 0;
+}
+
+.nav__item {
+    width: max-content;
+}
+
+.a__navbar {
+    text-decoration: none;
+    color: var(--main_dark);
+}
+
+.nav__logo {
+    max-width: 200px;
+}
+
+nav .wrap-menu{
+    color: var(--main_dark);
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+/*#######*/
+/*! footer*/
+footer {
+    background: var(--main_dark);
+    font-size: var(--fz_lg);
+
+    padding: 36px 0;
+}
+
+.footer-subtitle {
+    color: white;
+}
+
+.footer__container {
+    /*Contenedor de todo lo que está tendro del footer*/
+    display: flex;
+    flex-direction: column; /*El disclaimer se pone debajo del contenedor de la información y las redes sociales*/
+
+    gap: 16px;
+}
+
+.footer__info-social {
+    /*Contenedor de la información de la empresa y las redes sociales*/
+    display: flex;
+    justify-content: space-around; /*Se ponen uno al lado del otro*/
+
+    align-items: center;
+}
+
+.footer__info {
+    /*El contenedor toma el mínimo tamaño posible (Para que el logo no se agrande demasiado)*/
+    width: min-content;
+    text-align: center;
+}
+
+.footer__logo {
+    /*El logo ocupa el 100% del su contenedor*/
+    width: 100%;
+}
+
+.footer__list {
+    /*Estilos aplicables a ambas listas*/
+    color: white;
+    list-style: none;
+    padding: 0px;
+}
+
+.social__list {
+    /*Estilos independientes para las redes sociales*/
+    display: flex;
+    gap: 16px;
+    justify-content: space-evenly;
+}
+
+.social__item i {
+    /*Tamaño de los iconos*/
+    color: white;
+    font-size: var(--fz_xxlg);
+}
+
+.footer__disclaimer {
+    text-align: center;
+    margin: 0px auto;
+    color: white;
+
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*##############################*/
+/*!Modificadores clases genéricas*/
+/*##############################*/
+.btn--black {
+    /*Modificación de la clase genérica btn*/
+    background-color: var(--main_dark);
+    color: white;
+}
+
+.subtitle--providers {
+    color: var(--main_dark);
+}
+
+/*#####################################*/
+/*START index.html*/
+/*#####################################*/
+
+/*##############################*/
+/*!SECCIÓN HERO CONTAINER (INDEX)*/
+
+/*ESTILOS DEL CONTENEDOR HERO*/
+.hero {
+    height: calc(100vh - 60px); /*Se le debe restar el alto de la barra de navegación (Por ahora se resta cero)*/
+
+    background: url('../img/bg_desktop.jpg'); /*Inicialmente el fondo el el de desktop, con un media query se adapta a móbiles*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /*Centrar el contenido verticalmente*/
+    display: flex;
+    align-items: center;
+
+    padding-left: 1.2vw;
+}
+
+.hero__content {
+    width: 50%; /*El texto siempre ocupará el 50% del hero*/
+    display: flex;
+    flex-direction: column;
+
+    align-items: center; /*Centrado del logo y del botón*/
+    text-align: center; /*Centrado del párrafo*/
+
+    font-size: 2vw; /*El tamaño de la fuente del contenedor depende del ancho del dispositivo*/
+}
+
+.hero__logo {
+    width: 80%;
+}
+
+.hero__text {
+    font-size: 1em; /*El tamaño de fuente es relativa a su contenedor*/
+    font-weight: 300;
+}
+
+.btn--hero {
+    font-size: 0.6em; /*El tamaño de fuente es relativa a su contenedor*/
+}
+
+/*#####################################*/
+/* sección de las categorías INDEX*/
+
+.catContainer{
+    margin-top: 40px;
+}
+
+.bannerCategories{
+    background-color: var(--main_yellow);
+    height: 25vh;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.subtitle--cat{
+    padding-top: 5vh;
+}
+
+.subtitle{
+    color: white;
+    font-size: var(--fz_md);
+}
+
+.circlesContainer{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 60px;
+    justify-content: center;
+    margin-top: -12vh;
+    margin-bottom: 32px;
+}
+
+.circle{
+    width: 240px;
+}
+
+.imgRounded{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.descripCateg{
+    text-align: center;
+    font-size: var(--fz_md);
+}
+
+.a__catContainer{
+    text-decoration: none;
+    color: var(--main_dark);
+}
+
+/*#####################################*/
+/*END index.html*/
+/*#####################################*/
+
+/*#####################################*/
+/*START categoryX.html*/
+/*#####################################*/
+
+/*#####################################*/
+/*! sección de los proveedores*/
+.providers__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.providers__provider-logo {
+    width: 20vw;
+    min-width: 180px;
+
+    filter: grayscale(100%); /*Inicialmente la imágen está en blanco y negro*/
+
+    transition: all 0.3s ease;
+}
+
+.providers__provider-logo:hover {
+    /*Cuando se ponga el cursor sobre algún logo, se le quita el filtro de grises y se mueve un poquito*/
+    filter: grayscale(0);
+    transform: translate(1%, -1%);
+    transform: scale(1.05);
+}
+
+/*#####################################*/
+/*! sección de los productos de la categoría*/
+/*Contenedor de las cards*/
+.products__container{
+
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    margin-top: -12vh; /*Para que entre en el fondo amarillo*/
+}
+
+.subtitle--products{
+    /*Separación superior entre el título de la sección y el fondo amarillo*/
+    padding-top: 5vh;
+}
+
+/*Fondo amarillo*/
+.products__header {
+    background-color: var(--main_yellow);
+    height: 25vh;
+    border-radius: 16px;
+}
+
+.product-card {
+    width: 18vw; /*El ancho es relativo al tamaño del dispositivo*/
+    min-width: 220px; /*Pero no puede ser menor a 220*/
+    background: rgb(241, 241, 241);
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 16px;
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+}
+
+.product-card:hover{
+    box-shadow: 4px 16px 36px rgb(204, 204, 204);
+    transform: translate(1%, -1%);
+}
+
+.product-card__image-container {
+    /*Pattern tomado de: https://www.magicpattern.design/tools/css-backgrounds */
+    background-color: #ffffff;
+    opacity: 0.8;
+    background-image: radial-gradient(#ff2a2b 1.1500000000000001px, #ffffff 1.1500000000000001px);
+    background-size: 23px 23px;
+
+    position: relative; /*Para poder posicionar el descuento en la esquina superior derecha*/
+}
+
+.product-card__image-container img {
+    /*El ancho de la imágen es el 100% de su contenedor*/
+    width: 100%;
+}
+
+.product__disscount{
+    margin: 0px; /*Se quitan los márgenes por defecto del párrafo*/
+
+    display: inline-block; /*Solo ocupa lo necesario*/
+    background: var(--main_red);
+    border-radius: 8px;
+    padding: 0.4em 0.6em;
+
+    /*Posición superior derecha*/
+    position: absolute;
+    top: 8px;
+    right: 8px; 
+}
+
+.product-card__body{
+    padding: 16px;
+}
+
+.product-card__name{
+    font-size: var(--fz_lg);
+    text-transform:initial; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-card__price{
+    font-size: var(--fz_lg);
+    text-transform: uppercase;
+    margin: 0px 0px 12px 0px; /*Modificar los márgenes por defecto del párrafo*/
+}
+
+.product-card__price span{
+    /*Los dólares se muestran dentro de un cuadro rojo*/
+    font-weight: bolder;
+}
+
+.product-card__buttons{
+    /*Los botones se ponen uno al lado del otro*/
+    display: flex;
+    justify-content: space-between;
+}
+
+/*#####################################*/
+/*END categoryX.html*/
+/*#####################################*/
+
+/*###############*/
+/*!MEDIA QUERIES*/
+/*###############*/
+
+@media (max-width: 768px) {
+    /*Para pantallas pequeñas*/
+    .btn{
+        font-size: var(--fz_sm);
+    }
+
+    /*!Hero section*/
+    .hero {
+        background: url('../img/bg_mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        display: block; /*Se quita el flex*/
+
+        padding-top: 4vh;
+    }
+
+    .hero__content {
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .hero__logo {
+        width: 100%;
+    }
+
+    .hero__text {
+        font-size: 6vw;
+    }
+
+    .btn--hero {
+        font-size: 4vw;
+        width: max-content;
+    }
+
+    /* NAVBAR */
+    .btn--primary {
+        background: #ffd381;
+        color: white;
+        width: fit-content;
+    }
+
+    .nav__navigation {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        gap: 4px;
+        background-color: var(--main_yellow);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+
+        z-index: 1;
+    }
+
+    .nav__item {
+        width: 80vw;
+        text-align: center;
+    }
+
+    nav .wrap-menu {
+        display: block;
+        background: var(--main_yellow);
+        border-radius: 22px;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav__navigation_visible {
+        left: 0;
+    }
+
+    .body__fixed {
+        position: fixed;
+    }
+
+    /* Categories */
+
+
+    /*! footer */
+    footer {
+        font-size: var(--fz_sm);
+    }
+
+    .footer__info-social {
+        flex-direction: column;
+        align-items: center;
+    }
+}
