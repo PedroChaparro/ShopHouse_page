@@ -434,6 +434,8 @@ footer {
 
         left: 100%;
         transition: left 0.3s;
+
+        z-index: 1;
     }
 
     .nav__item {
