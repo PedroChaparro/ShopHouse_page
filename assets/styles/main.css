@@ -27,11 +27,56 @@ html{
 
     display: inline-block; 
 
-    /* transition: all 0.3s ease; */
+    transition: all 0.3s ease;
+}
+
+.btn--primary:hover{
+    background: var(--main_yellow);
+    color: white;
 }
 
 /*#######*/
 /*TODO NAVBAR*/
+nav{
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: none;
+}
+
+.nav__navigation{
+    display: flex;
+    gap: 2px;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    padding: 0;
+}
+
+.nav__item{
+    width: max-content;
+}
+
+.a__navbar{
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
+.nav__logo{
+    max-width: 200px;
+}
+
+nav .wrap-menu{
+    color: black;
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
 
 /*#######*/
 /*TODO footer*/
@@ -53,7 +98,7 @@ html{
 
 /*ESTILOS DEL CONTENEDOR HERO*/
 .hero {
-    height: calc(100vh - 0px); /*Se le debe restar el alto de la barra de navegación (Por ahora se resta cero)*/
+    height: calc(100vh - 60px); /*Se le debe restar el alto de la barra de navegación (Por ahora se resta cero)*/
 
     background: url('../img/bg_desktop.jpg'); /*Inicialmente el fondo el el de desktop, con un media query se adapta a móbiles*/
     background-size: cover;
@@ -150,5 +195,40 @@ html{
     .btn--hero {
         font-size: 4vw;
         width: max-content;
+    }
+    
+    .btn--primary{
+        background: #ffd381;
+        color: white;
+        width:fit-content;
+    }
+
+    .nav__navigation{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: var(--main_yellow);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    nav .wrap-menu{
+        display: block;
+    }
+
+    .nav__navigation_visible{
+        left: 0;
+    }
+
+    .body__fixed{
+        position: fixed;
     }
 }
