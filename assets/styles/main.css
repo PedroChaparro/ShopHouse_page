@@ -167,7 +167,7 @@ nav .wrap-menu{
 
 @media (max-width: 768px) {
     /*Para pantallas pequeñas*/
-
+    /* Hero */
     .hero {
         background: url('../img/bg_mobile.jpg');
         background-repeat: no-repeat;
@@ -196,7 +196,8 @@ nav .wrap-menu{
         font-size: 4vw;
         width: max-content;
     }
-    
+
+    /* NAVBAR */
     .btn--primary{
         background: #ffd381;
         color: white;
@@ -207,6 +208,7 @@ nav .wrap-menu{
         flex-direction: column;
         align-items: center;
         margin: 0;
+        gap: 4px;
         background-color: var(--main_yellow);
         position: fixed;
         left: 0;
@@ -218,6 +220,11 @@ nav .wrap-menu{
 
         left: 100%;
         transition: left 0.3s;
+    }
+
+    .nav__item{
+        width: 80vw;
+        text-align: center;
     }
 
     nav .wrap-menu{
