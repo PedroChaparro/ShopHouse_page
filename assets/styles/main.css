@@ -44,7 +44,7 @@ html {
 }
 
 /*#######*/
-/*TODO NAVBAR*/
+/* NAVBAR */
 nav{
     height: 60px;
     display: flex;
@@ -68,7 +68,7 @@ nav{
 
 .a__navbar{
     text-decoration: none;
-    color: #2e2e2e;
+    color: var(--main_dark);
 }
 
 .nav__logo{
@@ -76,7 +76,7 @@ nav{
 }
 
 nav .wrap-menu{
-    color: black;
+    color: var(--main_dark);
     background: none;
     border: none;
     font-size: 24px;
