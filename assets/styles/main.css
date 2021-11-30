@@ -219,7 +219,7 @@ footer {
 
 .bannerCategories{
     background-color: var(--main_yellow);
-    height: calc(200px - 36px);
+    height: 25vh;
     text-align: center;
     padding-top: 36px;
     border-radius: 16px;
@@ -235,7 +235,7 @@ footer {
 	flex-wrap: wrap;
 	gap: 60px;
     justify-content: center;
-    margin-top: -90px;
+    margin-top: -12vh;
     margin-bottom: 32px;
 }
 
@@ -368,7 +368,7 @@ footer {
 
     .bannerCategories{
         background-color: var(--main_yellow);
-        height: calc(100px - 36px);
+        height: 100px;
         text-align: center;
         padding-top: 4px;
     }
@@ -378,7 +378,7 @@ footer {
         flex-wrap: wrap;
         gap: 30px;
         justify-content: center;
-        margin-top: -16px;
+        margin-top: -6vh;
         margin-bottom: 32px;
     }
 
