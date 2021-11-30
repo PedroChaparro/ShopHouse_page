@@ -229,6 +229,12 @@ nav .wrap-menu{
 
     nav .wrap-menu{
         display: block;
+        background: var(--main_yellow);
+        border-radius: 22px;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav__navigation_visible{
