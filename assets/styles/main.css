@@ -26,7 +26,7 @@ html {
 }
 
 .btn {
-    border: 2px transparent;
+    border: 1px transparent;
     background-color: white;
     padding: 0.8em 1.4em;
     border-radius: 16px;
@@ -38,14 +38,38 @@ html {
     transition: all 0.3s ease;
 }
 
-.btn--primary:hover{
+.btn--primary:hover {
     background: var(--main_yellow);
     color: white;
 }
 
-/*#######*/
-/* NAVBAR */
-nav{
+.btn--secondary{
+    border: 1px solid var(--main_red);
+    background: var(--main_red);
+    color: white;
+}
+
+.btn--secondary--transparent{
+    background: transparent;
+    border: 1px solid var(--main_red);
+    color: var(--main_red);
+}
+
+.subtitle {
+    font-size: var(--fz_lg);
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px var(--main_dark);
+}
+
+.page-section {
+    /*Las secciones de la página tienen un márgen superior e inferior*/
+    margin: 24px 0;
+}
+
+/*! NAVBAR*/
+nav {
     height: 60px;
     display: flex;
     justify-content: space-around;
@@ -53,7 +77,7 @@ nav{
     background: none;
 }
 
-.nav__navigation{
+.nav__navigation {
     display: flex;
     gap: 2px;
     list-style: none;
@@ -62,16 +86,16 @@ nav{
     padding: 0;
 }
 
-.nav__item{
+.nav__item {
     width: max-content;
 }
 
-.a__navbar{
+.a__navbar {
     text-decoration: none;
     color: var(--main_dark);
 }
 
-.nav__logo{
+.nav__logo {
     max-width: 200px;
 }
 
@@ -87,7 +111,7 @@ nav .wrap-menu{
 }
 
 /*#######*/
-/*TODO footer*/
+/*! footer*/
 footer {
     background: var(--main_dark);
     font-size: var(--fz_lg);
@@ -121,23 +145,27 @@ footer {
     text-align: center;
 }
 
-.footer__logo { /*El logo ocupa el 100% del su contenedor*/
+.footer__logo {
+    /*El logo ocupa el 100% del su contenedor*/
     width: 100%;
 }
 
-.footer__list { /*Estilos aplicables a ambas listas*/
+.footer__list {
+    /*Estilos aplicables a ambas listas*/
     color: white;
     list-style: none;
     padding: 0px;
 }
 
-.social__list { /*Estilos independientes para las redes sociales*/
+.social__list {
+    /*Estilos independientes para las redes sociales*/
     display: flex;
     gap: 16px;
     justify-content: space-evenly;
 }
 
-.social__item i { /*Tamaño de los iconos*/
+.social__item i {
+    /*Tamaño de los iconos*/
     color: white;
     font-size: var(--fz_xxlg);
 }
@@ -158,6 +186,10 @@ footer {
     /*Modificación de la clase genérica btn*/
     background-color: var(--main_dark);
     color: white;
+}
+
+.subtitle--providers {
+    color: var(--main_dark);
 }
 
 /*#####################################*/
@@ -270,10 +302,127 @@ footer {
 /*#####################################*/
 
 /*#####################################*/
-/*TODO sección de los proveedores*/
+/*! sección de los proveedores*/
+.providers__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.providers__provider-logo {
+    width: 20vw;
+    min-width: 180px;
+
+    filter: grayscale(100%); /*Inicialmente la imágen está en blanco y negro*/
+
+    transition: all 0.3s ease;
+}
+
+.providers__provider-logo:hover {
+    /*Cuando se ponga el cursor sobre algún logo, se le quita el filtro de grises y se mueve un poquito*/
+    filter: grayscale(0);
+    transform: translate(1%, -1%);
+    transform: scale(1.05);
+}
 
 /*#####################################*/
-/*TODO sección de los productos de la categoría*/
+/*! sección de los productos de la categoría*/
+/*Contenedor de las cards*/
+.products__container{
+
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    margin-top: -12vh; /*Para que entre en el fondo amarillo*/
+}
+
+.subtitle--products{
+    /*Separación superior entre el título de la sección y el fondo amarillo*/
+    padding-top: 5vh;
+}
+
+/*Fondo amarillo*/
+.products__header {
+    background-color: var(--main_yellow);
+    height: 25vh;
+    border-radius: 16px;
+}
+
+.product-card {
+    width: 18vw; /*El ancho es relativo al tamaño del dispositivo*/
+    min-width: 220px; /*Pero no puede ser menor a 220*/
+    background: rgb(241, 241, 241);
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 16px;
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+}
+
+.product-card:hover{
+    box-shadow: 4px 16px 36px rgb(204, 204, 204);
+    transform: translate(1%, -1%);
+}
+
+.product-card__image-container {
+    /*Pattern tomado de: https://www.magicpattern.design/tools/css-backgrounds */
+    background-color: #ffffff;
+    opacity: 0.8;
+    background-image: radial-gradient(#ff2a2b 1.1500000000000001px, #ffffff 1.1500000000000001px);
+    background-size: 23px 23px;
+
+    position: relative; /*Para poder posicionar el descuento en la esquina superior derecha*/
+}
+
+.product-card__image-container img {
+    /*El ancho de la imágen es el 100% de su contenedor*/
+    width: 100%;
+}
+
+.product__disscount{
+    margin: 0px; /*Se quitan los márgenes por defecto del párrafo*/
+
+    display: inline-block; /*Solo ocupa lo necesario*/
+    background: var(--main_red);
+    border-radius: 8px;
+    padding: 0.4em 0.6em;
+
+    /*Posición superior derecha*/
+    position: absolute;
+    top: 8px;
+    right: 8px; 
+}
+
+.product-card__body{
+    padding: 16px;
+}
+
+.product-card__name{
+    font-size: var(--fz_lg);
+    text-transform:initial; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-card__price{
+    font-size: var(--fz_lg);
+    text-transform: uppercase;
+    margin: 0px 0px 12px 0px; /*Modificar los márgenes por defecto del párrafo*/
+}
+
+.product-card__price span{
+    /*Los dólares se muestran dentro de un cuadro rojo*/
+    font-weight: bolder;
+}
+
+.product-card__buttons{
+    /*Los botones se ponen uno al lado del otro*/
+    display: flex;
+    justify-content: space-between;
+}
 
 /*#####################################*/
 /*END categoryX.html*/
@@ -285,6 +434,9 @@ footer {
 
 @media (max-width: 768px) {
     /*Para pantallas pequeñas*/
+    .btn{
+        font-size: var(--fz_sm);
+    }
 
     /*!Hero section*/
     .hero {
@@ -317,13 +469,13 @@ footer {
     }
 
     /* NAVBAR */
-    .btn--primary{
+    .btn--primary {
         background: #ffd381;
         color: white;
-        width:fit-content;
+        width: fit-content;
     }
 
-    .nav__navigation{
+    .nav__navigation {
         flex-direction: column;
         align-items: center;
         margin: 0;
@@ -339,14 +491,16 @@ footer {
 
         left: 100%;
         transition: left 0.3s;
+
+        z-index: 1;
     }
 
-    .nav__item{
+    .nav__item {
         width: 80vw;
         text-align: center;
     }
 
-    nav .wrap-menu{
+    nav .wrap-menu {
         display: block;
         background: var(--main_yellow);
         border-radius: 22px;
@@ -356,11 +510,11 @@ footer {
         align-items: center;
     }
 
-    .nav__navigation_visible{
+    .nav__navigation_visible {
         left: 0;
     }
 
-    .body__fixed{
+    .body__fixed {
         position: fixed;
     }
 
@@ -376,5 +530,4 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-      
 }
