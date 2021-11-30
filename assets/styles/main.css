@@ -211,18 +211,18 @@ footer {
 /* sección de las categorías INDEX*/
 
 .catContainer{
-    width: 76%;
-    margin: 0px auto;
     margin-top: 40px;
-    max-width: 1200px;
 }
 
 .bannerCategories{
     background-color: var(--main_yellow);
     height: 25vh;
     text-align: center;
-    padding-top: 36px;
     border-radius: 16px;
+}
+
+.subtitle--cat{
+    padding-top: 5vh;
 }
 
 .subtitle{
@@ -366,21 +366,6 @@ footer {
 
     /* Categories */
 
-    .bannerCategories{
-        background-color: var(--main_yellow);
-        height: 100px;
-        text-align: center;
-        padding-top: 4px;
-    }
-
-    .circlesContainer{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        margin-top: -6vh;
-        margin-bottom: 32px;
-    }
 
     /*! footer */
     footer {
