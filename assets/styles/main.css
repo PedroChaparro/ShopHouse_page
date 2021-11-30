@@ -68,8 +68,7 @@ html {
     margin: 24px 0;
 }
 
-/*#######*/
-/*TODO NAVBAR*/
+/*! NAVBAR*/
 nav {
     height: 60px;
     display: flex;
@@ -93,15 +92,15 @@ nav {
 
 .a__navbar {
     text-decoration: none;
-    color: #2e2e2e;
+    color: var(--main_dark);
 }
 
 .nav__logo {
     max-width: 200px;
 }
 
-nav .wrap-menu {
-    color: black;
+nav .wrap-menu{
+    color: var(--main_dark);
     background: none;
     border: none;
     font-size: 24px;
@@ -241,7 +240,58 @@ footer {
 }
 
 /*#####################################*/
-/*TODO sección de las categorías*/
+/* sección de las categorías INDEX*/
+
+.catContainer{
+    margin-top: 40px;
+}
+
+.bannerCategories{
+    background-color: var(--main_yellow);
+    height: 25vh;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.subtitle--cat{
+    padding-top: 5vh;
+}
+
+.subtitle{
+    color: white;
+    font-size: var(--fz_md);
+}
+
+.circlesContainer{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 60px;
+    justify-content: center;
+    margin-top: -12vh;
+    margin-bottom: 32px;
+}
+
+.circle{
+    width: 240px;
+}
+
+.imgRounded{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.descripCateg{
+    text-align: center;
+    font-size: var(--fz_md);
+}
+
+.a__catContainer{
+    text-decoration: none;
+    color: var(--main_dark);
+}
 
 /*#####################################*/
 /*END index.html*/
@@ -467,6 +517,9 @@ footer {
     .body__fixed {
         position: fixed;
     }
+
+    /* Categories */
+
 
     /*! footer */
     footer {
