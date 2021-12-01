@@ -13,17 +13,17 @@ ShopHouse a fictitious supermarket web page created for learning purposes.
 #### 🖥️ Desktop view
 
 <table><tr><td>
-    <img src="https://i.ibb.co/VxF8wJS/home-desktop.png" width="600px"/>
+    <img src="https://i.postimg.cc/KjBqbPQx/home-desktop.png" width="600px"/>
 </td></tr></table>
 
 <table><tr><td>
-    <img src="https://i.ibb.co/ss3z9X3/home-desktop2.png" width="600px"/>
+    <img src="https://i.postimg.cc/qB3Z2rrS/home-desktop2.png" width="600px"/>
 </td></tr></table>
 
 #### 📱 Mobile view
 
 <table><tr><td>
-    <img src="https://i.ibb.co/mcNHWTH/home-mobile.png" height="600px"/>
+    <img src="https://cdn.discordapp.com/attachments/904046782072356916/915414212371705916/unknown.png" height="300px"/>
 </td></tr></table>
 
 ### 🛒 Category example: 🛒
@@ -41,11 +41,9 @@ ShopHouse a fictitious supermarket web page created for learning purposes.
 #### 📱 Mobile view
 
 <table><tr><td>
-    <img src="https://i.ibb.co/kKR5t6d/home-appliances-mobile.pngt" height="600px"/>
-</td></tr></table>
-
-<table><tr><td>
-    <img src="https://i.ibb.co/ZzdS6xs/home-appliances-mobile2.png" height="600px"/>
+    <img src="https://cdn.discordapp.com/attachments/904046782072356916/915414212690444348/unknown.png" height="300px"/>
+</td><td>
+    <img src="https://cdn.discordapp.com/attachments/904046782072356916/915414212979863612/unknown.png" height="300px"/>
 </td></tr></table>
 
 ## POWERED BY: 
